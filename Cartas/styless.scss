@@ -127,17 +127,15 @@ $ringHeight: 33;
         @for $i from 1 through 24 {
             &:nth-child(#{$i + $r*72}) {
                 background-position: #{random(13) * $cardWidth}px #{random(4) * $cardHeight}px;
-                // transform: rotateY(#{($i - 1 + $r * 0.5) * 360 / 24}deg) translateX(#{$towerRadius}px) translateY(#{($r - 1.5) * ($ringHeight * 2)}px) rotateX(#{((random(2) - 1) * 180) - 20}deg);
+                
                 transform: rotateY(#{($i - 1 + $r * 0.5) * 360 / 24}deg) translateX(#{$towerRadius}px) translateY(#{($r - 1.5) * ($ringHeight * 2)}px) rotateX(-20deg);
             }
             &:nth-child(#{$i + 24 + $r*72}) {
                 background-position: #{random(13) * $cardWidth}px #{random(4) * $cardHeight}px;
-                // transform: rotateY(#{($i - 24.5 + $r * 0.5) * 360 / 24}deg) translateX(#{$towerRadius}px) translateY(#{($r - 1.5) * ($ringHeight * 2)}px) rotateX(#{((random(2) - 1) * 180) + 20}deg);
                 transform: rotateY(#{($i - 24.5 + $r * 0.5) * 360 / 24}deg) translateX(#{$towerRadius}px) translateY(#{($r - 1.5) * ($ringHeight * 2)}px) rotateX(200deg);
             }
             &:nth-child(#{$i + 48 + $r*72}) {
                 background-position: #{random(13) * $cardWidth}px #{random(4) * $cardHeight}px;
-                // transform: rotateY(#{($i - 48.75 + $r * 0.5) * 360 / 24}deg) translateX(#{$towerRadius}px) translateY(#{($r - 2) * ($ringHeight * 2)}px) rotateX(#{((random(2) - 1) * 180) - 90}deg);
                 transform: rotateY(#{($i - 48.75 + $r * 0.5) * 360 / 24}deg) translateX(#{$towerRadius}px) translateY(#{($r - 2) * ($ringHeight * 2)}px) rotateX(-90deg);
             }
         }
